@@ -249,6 +249,12 @@ public class WinInicio extends javax.swing.JFrame {
     private void MnuConActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnuConActionPerformed
         PnlAgenda.setVisible(true);
         BtnAgregar.setVisible(false);
+        try {
+            // TODO add your handling code here:
+            base.consulta("Agenda");
+        } catch (SQLException ex) {
+            Logger.getLogger(WinInicio.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_MnuConActionPerformed
 
     private void BtnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAgregarActionPerformed
